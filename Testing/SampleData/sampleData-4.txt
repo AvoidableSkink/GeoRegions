@@ -1,0 +1,26 @@
+1,World,0,5.101e+08
+2,United States,64363,234235
+3,Utah,425,234
+4,Cache County,116909,1887.761
+5,Logan,48913,29.82
+^^^
+5,North Logan,9659,11.1
+^^^
+^^^
+4,Box Elder County,22620,2353
+^^^
+4,Davis County,263640,4532
+^^^
+^^^
+3,California,3252,2321
+^^^
+3,Idaho,62,324
+^^^
+3,Nevada,2352,23523
+^^^
+^^^
+2,Duetschland,3523523,352644
+^^^
+2,England,3525,2352
+^^^
+^^^
