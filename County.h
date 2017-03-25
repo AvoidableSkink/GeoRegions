@@ -7,7 +7,6 @@
 
 #include "Region.h"
 
-// TODO: Finish definition for a County class
 class County : public Region
 {
 public:

@@ -7,7 +7,6 @@
 
 #include "Region.h"
 
-// TODO: Finish definition for a State class
 class State : public Region
 {
 public:
