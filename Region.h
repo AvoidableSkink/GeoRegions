@@ -52,6 +52,7 @@ public:
     // TODO: Add methods to manage sub-regions
     void add(Region* rPtr);
     int getSubRegionCount();
+    Region* getSubAtID(int id);
 
     unsigned int computeTotalPopulation();
 

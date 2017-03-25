@@ -246,6 +246,7 @@ void UserInterface::changeToSubRegion()
         {
             Region* region;
             // TODO: Lookup the region by Id and assign it to the region variable.
+            region = m_currentRegion->getSubAtID(id);
             if (region!=nullptr)
             {
                 UserInterface* nextUI = nullptr;

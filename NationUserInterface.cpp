@@ -13,7 +13,7 @@ NationUserInterface::NationUserInterface(Region* contextRegion) :
 
 Region::RegionType NationUserInterface::getSubRegionType()
 {
-    return Region::NationType;
+    return Region::StateType;
 }
 
 void NationUserInterface::setupMenu()

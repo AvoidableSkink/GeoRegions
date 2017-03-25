@@ -242,10 +242,21 @@ unsigned int Region::getNextId()
     return m_nextId++;
 }
 
+//my lovely added functions
 void Region::add(Region* rPtr) {
     mySubRegions.push_back(rPtr);
 }
 
 int Region::getSubRegionCount() {
     return mySubRegions.size();
+}
+
+Region* Region::getSubAtID(int id) {
+    for (int i = 0; i < mySubRegions.size(); ++i) {
+        if (mySubRegions[i]->getId() == id)
+        {
+            return mySubRegions[i];
+        }
+    }
+    return nullptr;
 }
