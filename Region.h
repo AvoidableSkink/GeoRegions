@@ -51,6 +51,7 @@ public:
 
     // TODO: Add methods to manage sub-regions
     void add(Region* rPtr);
+    int getSubRegionCount();
 
     unsigned int computeTotalPopulation();
 
@@ -64,6 +65,7 @@ protected:
     static unsigned int getNextId();
 
     // TODO: add whatever other helper methods you might need
+    void listHelper(std::ostream& out, Region* rPtr);
 };
 
 
