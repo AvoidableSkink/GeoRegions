@@ -229,3 +229,7 @@ unsigned int Region::getNextId()
 
     return m_nextId++;
 }
+
+void Region::add(Region* rPtr) {
+    mySubRegions.push_back(rPtr);
+}

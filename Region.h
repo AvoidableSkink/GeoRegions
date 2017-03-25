@@ -6,6 +6,7 @@
 #define GEO_REGIONS_REGION_H
 
 #include <string>
+#include <vector>
 
 class Region {
 public:
@@ -20,6 +21,7 @@ protected:
     bool            m_isValid = false;
 
     // TODO: Add data members to manage sub-regions
+    std::vector<Region*> mySubRegions;
 
 private:
     static unsigned int m_nextId;
@@ -48,8 +50,8 @@ public:
     bool getIsValid() const { return m_isValid; }
 
     // TODO: Add methods to manage sub-regions
+    void add(Region* rPtr);
 
-    // TODO: Add method to compute total population, as m_population + the total population for all sub-regions
     unsigned int computeTotalPopulation();
 
     void list(std::ostream& out);
