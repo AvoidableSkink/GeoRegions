@@ -138,7 +138,7 @@ std::string Region::getRegionLabel() const
 
 unsigned int Region::computeTotalPopulation()
 {
-    unsigned int totalPopulation;
+    unsigned int totalPopulation = 0;
     if (getSubRegionCount() == 0)
     {
         totalPopulation = m_population;
@@ -154,13 +154,15 @@ unsigned int Region::computeTotalPopulation()
 unsigned int Region::computeTotalPopulationHelper() {
     if (getSubRegionCount() == 0)
     {
-        return this->getPopulation();
+        return getPopulation();
     }
     else
     {
+        unsigned int totalPopulation = 0;
         for (int i = 0; i < mySubRegions.size(); ++i) {
-            return mySubRegions[i]->computeTotalPopulationHelper();
+            totalPopulation += mySubRegions[i]->computeTotalPopulationHelper();
         }
+        return totalPopulation;
     }
 }
 
