@@ -171,20 +171,8 @@ void Region::list(std::ostream& out)
     out << std::endl;
     out << getName() << ":" << std::endl;
 
-    // TODO: implement the loop in the list method33
-    // foreach subregion, print out
-    //      id    name
-    int size = mySubRegions.size();
-    for (int i = 0; i < size; ++i) {
-        listHelper(out, mySubRegions[i]);
-    }
-}
-
-void Region::listHelper(std::ostream& out, Region *rPtr) {
-    out << rPtr->getId() << " " << rPtr->getName() << std::endl;
-    if (rPtr->getSubRegionCount() > 0)
-    {
-        rPtr->list(out);
+    for (int i = 0; i < mySubRegions.size(); ++i) {
+        out << mySubRegions[i]->getId() << " " << mySubRegions[i]->getName() << std::endl;
     }
 }
 
