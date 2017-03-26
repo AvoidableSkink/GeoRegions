@@ -455,6 +455,14 @@ void RegionTester::testSubRegions()
     {
         std::cout << "Failure: Region found by id that does not exist." << std::endl;
     }
+
+    Region* region = Region::create(Region::NationType, "United States,324118787,6110679");
+    tmp = world->getSubAtID(2);
+    if (region->getName() != tmp->getName() || region->getPopulation() != tmp->getPopulation() || region->getArea() != tmp->getArea())
+    {
+        std::cout << "Failure: getSubAtID read in incorrect region." << std::endl;
+    }
+
 }
 
 void RegionTester::testComputeTotalPopulation()
