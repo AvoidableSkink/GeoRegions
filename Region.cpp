@@ -148,7 +148,6 @@ unsigned int Region::computeTotalPopulation()
         totalPopulation = m_population + computeTotalPopulationHelper();
     }
     return totalPopulation;
-    // TODO: implement computeTotalPopulation, such that the result is m_population + the total population for all sub-regions
 }
 
 unsigned int Region::computeTotalPopulationHelper() {
@@ -195,9 +194,9 @@ void Region::display(std::ostream& out, unsigned int displayLevel, bool showChil
 
     if (showChild)
     {
-        // TODO: implement loop in display method
-        // foreach subregion
-        //      display that subregion at displayLevel+1 with the same showChild value
+        for (int i = 0; i < mySubRegions.size(); ++i) {
+            mySubRegions[i]->display(out, displayLevel, false);
+        }
     }
 }
 
