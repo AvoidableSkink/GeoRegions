@@ -199,8 +199,6 @@ void Region::display(std::ostream& out, unsigned int displayLevel, bool showChil
     double area = getArea();
     double density = (double) totalPopulation / area;
 
-    // TODO: compute the totalPopulation using a method
-
     out << std::setw(6) << getId() << "  "
         << getName() << ", population="
         << totalPopulation
@@ -252,7 +250,7 @@ void Region::loadChildren(std::istream& in)
             Region* child = create(line);
             if (child!= nullptr)
             {
-                // TODO: Add the new sub-region to this region
+                mySubRegions.push_back(child);
                 child->loadChildren(in);
             }
         }
