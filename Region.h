@@ -53,6 +53,7 @@ public:
     Region* getSubAtID(int id);
 
     unsigned int computeTotalPopulation();
+    Region* getSubRegionByIndex(int);
 
     void list(std::ostream& out);
     void display(std::ostream& out, unsigned int displayLevel, bool showChild);

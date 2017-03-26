@@ -271,3 +271,7 @@ Region* Region::getSubAtID(int id) {
     }
     return nullptr;
 }
+
+Region* Region::getSubRegionByIndex(int index) {
+    return mySubRegions[index];
+}
