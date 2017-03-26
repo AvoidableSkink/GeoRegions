@@ -20,7 +20,6 @@ protected:
     double          m_area = 0;
     bool            m_isValid = false;
 
-    // TODO: Add data members to manage sub-regions
     std::vector<Region*> mySubRegions;
 
 private:
@@ -49,7 +48,6 @@ public:
     void setArea(double area) { m_area = area; }
     bool getIsValid() const { return m_isValid; }
 
-    // TODO: Add methods to manage sub-regions
     void add(Region* rPtr);
     int getSubRegionCount();
     Region* getSubAtID(int id);
@@ -65,7 +63,6 @@ protected:
     void loadChildren(std::istream& in);
     static unsigned int getNextId();
 
-    // TODO: add whatever other helper methods you might need
     unsigned int computeTotalPopulationHelper();
 };
 

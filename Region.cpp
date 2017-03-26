@@ -210,9 +210,6 @@ void Region::save(std::ostream& out)
         << "," << getArea()
         << std::endl;
 
-    // TODO: implement loop in save method to save each sub-region
-    // foreach subregion,
-    //      save that region
     for (int i = 0; i < mySubRegions.size(); ++i) {
         mySubRegions[i]->save(out);
     }
