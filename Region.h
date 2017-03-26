@@ -67,6 +67,8 @@ protected:
 
     // TODO: add whatever other helper methods you might need
     void listHelper(std::ostream& out, Region* rPtr);
+
+    unsigned int computeTotalPopulationHelper();
 };
 
 
