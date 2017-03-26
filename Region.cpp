@@ -128,7 +128,9 @@ Region::Region(RegionType type, const std::string data[]) :
 
 Region::~Region()
 {
-    // TODO: cleanup any dynamically allocated objects
+    for (int i = 0; i < mySubRegions.size(); ++i) {
+        delete mySubRegions[i];
+    }
 }
 
 std::string Region::getRegionLabel() const
