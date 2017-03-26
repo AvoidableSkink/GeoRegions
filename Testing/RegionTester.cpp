@@ -444,14 +444,29 @@ void RegionTester::testGettersAndSetters()
 
 void RegionTester::testSubRegions()
 {
+    std::string inputFile = "SampleData/sampleData-2.txt";
+    std::ifstream inputStream(inputFile);
+    Region* world = Region::create(inputStream);
+
     std::cout << "RegionTester::testSubRegions" << std::endl;
 
-    // TODO: Add test cases for managing sub-regions
+    Region* tmp = world->getSubAtID(0);
+    if (tmp != nullptr)
+    {
+        std::cout << "Failure: Region found by id that does not exist." << std::endl;
+    }
 }
 
 void RegionTester::testComputeTotalPopulation()
 {
+    std::string inputFile = "SampleData/sampleData-2.txt";
+    std::ifstream inputStream(inputFile);
+    Region* world = Region::create(inputStream);
+
     std::cout << "RegionTester::testComputeTotalPopulation" << std::endl;
 
-    // TODO: Add test cases for computeTotalPopulation
+    if (world->computeTotalPopulation() != 7809382530)
+    {
+        std::cout << "Failed to get correct totalPopulation " << std::endl;
+    }
 }
